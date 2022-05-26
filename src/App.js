@@ -6,6 +6,8 @@ import './App.css';
 
 function App() {
 
+  let [nickName, setNickName] = useState('something');
+
   return (
     <div className="App">
       <div className='web-logo'>
