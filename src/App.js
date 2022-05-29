@@ -21,7 +21,14 @@ function App() {
       </div>
 
       <div>
-        <button className='btn'>회원가입</button>
+        <button className='signup-btn'>회원가입</button>
+      </div>
+
+      {/* 회원가입 길마,길원 선택 모달창  */}
+      <div className='signup-select'>
+        <button>길드 간부 가입</button>
+        <button>길드원 가입</button>
+        <button>취소</button>
       </div>
     </div>
   );
