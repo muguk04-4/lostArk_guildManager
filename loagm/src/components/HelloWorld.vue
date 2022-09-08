@@ -1,3 +1,5 @@
+<!-- 
+--------------- Not using this now ---------------
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -42,6 +44,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<!--
 <style scoped>
 h3 {
   margin: 40px 0 0;
@@ -58,3 +61,4 @@ a {
   color: #42b983;
 }
 </style>
+-->
