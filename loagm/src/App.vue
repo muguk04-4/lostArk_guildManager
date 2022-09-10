@@ -1,7 +1,10 @@
 <template>
+  <!-- 테스트용 라우터 링크. 완성시 제거 -->
   <nav>
     <router-link to="/">login</router-link> |
-    <router-link to="/main">main</router-link>
+    <router-link to="/main">main</router-link> |
+    <router-link to="/signup_master">signup_master</router-link> |
+    <router-link to="/signup_member">signup_member</router-link>
   </nav>
   <router-view/>
 </template>

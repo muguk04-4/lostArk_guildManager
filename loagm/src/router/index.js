@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import LoginView from '../views/LoginView.vue'
 
 const routes = [
   {
@@ -11,6 +11,16 @@ const routes = [
     path: '/main',
     name: 'main',
     component: () => import(/* webpackChunkName: "main", webpackPrefetch:true */ '../views/MainView.vue')
+  },
+  {
+    path: '/signup_master',
+    name: 'master',
+    component: () => import(/* webpackChunkName: "signup", webpackPrefetch:true */ '../views/SignUpMasterView.vue')
+  },
+  {
+    path: '/signup_member',
+    name: 'member',
+    component: () => import(/* webpackChunkName: "signup", webpackPrefetch:true */ '../views/SignUpMemberView.vue')
   }
 ]
 

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1>로스트아크 길드 매니저</h1>
+    <h1>길드 현황판</h1>
   </div>
 </template>
 
 <script>
 export default {
-  data(){
-    return{
+  data () {
+    return {
       value: 0
     }
   }
