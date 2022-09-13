@@ -40,8 +40,9 @@
 
   <!-- 메인 현황판 html -->
   <div>
-    <!-- nav 역할 할 맨윗줄 -->
+    <!-- navBar -->
     <div>
+      <!-- 길드명 캐릭검색 -->
       <div>
         <div>
           <h1>{{ guildName }}</h1>
@@ -52,6 +53,7 @@
         </div>
       </div>
 
+      <!-- 정렬버튼 -->
       <div>
         <div>
           <button>발탄</button>
@@ -66,6 +68,7 @@
         </div>
       </div>
 
+      <!-- 메뉴 및 도움말 -->
       <div>
         <div>
           <button>?</button>
@@ -78,7 +81,20 @@
 
     <!-- 현황판이 들어갈 곳 -->
     <div>
-      <table></table>
+      <table>
+        <thead>
+          <tr>임시닉</tr>
+          <tr>직업</tr>
+          <tr>템렙</tr>
+          <tr>발탄</tr>
+          <tr>비아</tr>
+          <tr>쿠크</tr>
+          <tr>아브</tr>
+          <tr>일리</tr>
+        </thead>
+        <!-- 캐릭터 들어갈 곳 -->
+        <tbody></tbody>
+      </table>
     </div>
 
     <button>Top</button>
@@ -93,7 +109,8 @@ export default {
       helpBtn: false,
       menuBtn: false,
       isGuildMaster: false,
-      isGuildMember: true
+      isGuildMember: true,
+      isEmpty: false
     }
   }
 }
