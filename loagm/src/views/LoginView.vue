@@ -12,8 +12,14 @@
     </div>
     <div class="input-layout">
       <div class="inputs">
-        <input type="text" id="userId">
-        <input type="text" id="userPw">
+        <div class="input-id">
+          <img src="../assets/icon/id.png" alt="">
+          <input type="text" id="userId">
+        </div>
+        <div class="input-pw">
+          <img src="../assets/icon/pw.png" alt="">
+          <input type="password" id="userPw">
+        </div>
       </div>
         <button id="logInBtn">확인</button>
     </div>
@@ -53,6 +59,7 @@ export default {
     flex-direction: column;
     margin-top: 180px;
   }
+
   .webname-layout {
     background-color: var(--cotainer-bg-color);
     color: white;
@@ -65,6 +72,7 @@ export default {
     align-items: center;
     justify-content: center;
   }
+
   .input-layout{
     background-color: var(--cotainer-bg-color);
     display: flex;
@@ -79,32 +87,52 @@ export default {
   .inputs{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    margin-right: 20px;
   }
-  .inputs input{
-    border-radius: 10px;
-    width: 300px;
-    height: 20px;
+  .inputs div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 270px;
+    height: 40px;
+    background-color: white;
   }
-  .inputs input:nth-child(2){
-    margin-top: 20px;
+  .inputs div img{
+    width: 40px;
+    height: 40px;
+  }
+  .inputs div input{
+    font-size: 12pt;
+    margin-left: 5px;
+    border: none;
+  }
+  .inputs div input:focus{
+    outline: none;
+  }
+  .inputs div:nth-child(2){
+    margin-top: 12px;
   }
   .input-layout button{
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
     background-color: white;
     color: var(--cotainer-bg-color);
     font-weight: 800;
     font-size: 13pt;
-    width: 50px;
-    height: 70px;
+    width: 60px;
+    height: 100px;
   }
+
   .signup-layout{
     margin-top: 30px;
   }
   .signup-layout button{
     font-weight: 800;
     font-size: 13pt;
+    border: 1px solid white;
     background-color: var(--cotainer-bg-color);
     color: white;
     border-radius: 10px;
