@@ -112,15 +112,15 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
     border-radius: 20px;
     width: 270px;
     height: 40px;
     background-color: white;
   }
   .inputs div img{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 100%;
+    opacity: 55%;
   }
   .inputs div input{
     font-size: 12pt;
