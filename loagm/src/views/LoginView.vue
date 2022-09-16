@@ -1,6 +1,6 @@
 <template>
   <!-- 회원가입 선택 모달창 -->
-  <div class="modal" v-if="signInBtn == true">
+  <div class="modal" v-if="signUpBtn == true">
     <button>저는 <span>길드장</span>이에요!</button>
     <button>저는 <span>길드원</span>이에요!</button>
   </div>
@@ -12,11 +12,11 @@
     </div>
     <div class="input-layout">
       <div class="inputs">
-        <div class="input-id">
+        <div>
           <img src="../assets/icon/id.png" alt="">
           <input type="text" id="userId">
         </div>
-        <div class="input-pw">
+        <div>
           <img src="../assets/icon/pw.png" alt="">
           <input type="password" id="userPw">
         </div>
@@ -42,13 +42,31 @@ export default {
 <style scoped>
   /* 모달 스타일 */
   .modal{
-  background-color: rgb(139, 138, 138);
-  text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .modal button{
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    border-radius: 15px;
+    background-color: var(--cotainer-bg-color);
+    color: white;
+    border: none;
+    width: 300px;
+    height: 140px;
+    font-size: 15pt;
+  }
+  .modal button:nth-child(2){
+    margin-left: 80px;
+  }
+  .modal button span{
+    font-size: 20pt;
+    font-weight: 700;
   }
 
   /* 본 페이지 스타일 */
@@ -63,7 +81,7 @@ export default {
   .webname-layout {
     background-color: var(--cotainer-bg-color);
     color: white;
-    border: 1px solid black;
+    border: none;
     border-radius: 15px;
     height: 55px;
     width: 300px;
@@ -81,7 +99,7 @@ export default {
     width: 400px;
     height: 150px;
     margin-top: 40px;
-    border: 1px solid black;
+    border: none;
     border-radius: 10px;
   }
   .inputs{
@@ -121,9 +139,9 @@ export default {
     background-color: white;
     color: var(--cotainer-bg-color);
     font-weight: 800;
-    font-size: 13pt;
+    font-size: 15pt;
     width: 60px;
-    height: 100px;
+    height: 90px;
   }
 
   .signup-layout{
