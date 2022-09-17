@@ -13,7 +13,7 @@
   </div>
 
   <!-- 길드장 회원가입 화면 -->
-  <div>
+  <div class="container">
     <p>이메일<input type="email" placeholder="someone@gmail.com"></p>
     <p>비밀번호<input type="text" placeholder="password"></p>
     <p>비밀번호 확인<input type="text" placeholder="password"></p>
@@ -35,6 +35,19 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--container-bg-color);
+  }
+  .container p{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 320px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
 </style>
