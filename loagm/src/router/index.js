@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
+import MainView from '../views/MainView.vue'
 
 const routes = [
   {
@@ -10,7 +11,7 @@ const routes = [
   {
     path: '/main',
     name: 'main',
-    component: () => import(/* webpackChunkName: "main", webpackPrefetch:true */ '../views/MainView.vue')
+    component: MainView
   },
   {
     path: '/signup_master',

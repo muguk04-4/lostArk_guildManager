@@ -117,5 +117,8 @@ export default {
 </script>
 
 <style scoped>
-
+  div{
+    color: var(--cotainer-bg-color);
+    font-size: 20pt;
+  }
 </style>

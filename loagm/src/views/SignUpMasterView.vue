@@ -14,11 +14,22 @@
 
   <!-- 길드장 회원가입 화면 -->
   <div class="container">
-    <p>이메일<input type="email" placeholder="someone@gmail.com"></p>
-    <p>비밀번호<input type="text" placeholder="password"></p>
-    <p>비밀번호 확인<input type="text" placeholder="password"></p>
-    <p>원정대 이름<input type="text" placeholder="Nickname"></p>
-    <p>길드 이름<input type="text" placeholder="guildname"></p>
+    <div class="input-layout">
+      <div class="input-name">
+        <p>이메일</p>
+        <p>비밀번호</p>
+        <p>비밀번호 확인</p>
+        <p>원정대 이름</p>
+        <p>길드 이름</p>
+      </div>
+      <div class="input-input">
+        <input type="email" placeholder="Someone@gmail.com">
+        <input type="text" placeholder="Password">
+        <input type="text" placeholder="Password">
+        <input type="text" placeholder="Nickname">
+        <input type="text" placeholder="Guildname">
+      </div>
+    </div>
     <button>확인</button>
   </div>
 </template>
@@ -36,18 +47,60 @@ export default {
 </script>
 
 <style scoped>
+  /* 모달창 스타일 */
+  /* 본 페이지 스타일 */
   .container{
+    margin-top: 180px;
+    background-color: var(--container-bg-color);
+  }
+  .input-layout{
+    width: 540px;
+    height: 430px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-color: var(--container-bg-color);
+    border: 1px solid black;
+    border-radius: 15px;
   }
-  .container p{
+  .input-name{
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    flex: 1;
+  }
+  .input-name p{
+    display: flex;
+    height: 40px;
+    margin: 0;
+    margin-left: auto;
+  }
+  .input-input{
     border: 1px solid white;
     border-radius: 10px;
-    width: 320px;
-    height: 60px;
-    margin-bottom: 10px;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14pt;
+    flex: 3.2;
+  }
+  .input-input input{
+    width: 300px;
+    height: 40px;
+    display: flex;
+    margin-right: 60px;
+  }
+  .container button{
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 15pt;
   }
 </style>
