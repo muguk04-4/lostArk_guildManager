@@ -13,6 +13,17 @@
 body {
   background-color: rgb(252, 245, 255);
 }
+input:focus{
+  outline: none;
+}
+/* 이거 왜 작동안하지? */
+/* button{
+  transition: background-color 0.15s, color 0.15s;
+}
+button:hover{
+  background-color: var(--container-bg-color);
+  color: white;
+} */
 
 #app {
   -webkit-font-smoothing: antialiased;
@@ -27,6 +38,6 @@ body {
 
 :root {
   --main-bg-color: brown;
-  --cotainer-bg-color: rgb(83, 61, 96);
+  --container-bg-color: rgb(83, 61, 96);
 }
 </style>

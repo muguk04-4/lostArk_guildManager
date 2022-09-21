@@ -84,7 +84,7 @@
       <table>
         <!-- 원정대 들어갈 곳 -->
         <thead>
-          <tr>임시닉</tr>
+          <tr>{{ accountName }}</tr>
           <tr>직업</tr>
           <tr>템렙</tr>
           <tr>발탄</tr>
@@ -107,6 +107,7 @@ export default {
   data () {
     return {
       guildName: '임시길넴',
+      accountName: '임시길넴',
       helpBtn: false,
       menuBtn: false,
       isGuildMaster: false,
@@ -120,6 +121,6 @@ export default {
 <style scoped>
   div{
     color: var(--cotainer-bg-color);
-    font-size: 20pt;
+    font-size: 10pt;
   }
 </style>

@@ -54,7 +54,7 @@ export default {
   }
   .modal button{
     border-radius: 15px;
-    background-color: var(--cotainer-bg-color);
+    background-color: var(--container-bg-color);
     color: white;
     border: none;
     width: 300px;
@@ -79,7 +79,7 @@ export default {
   }
 
   .webname-layout {
-    background-color: var(--cotainer-bg-color);
+    background-color: var(--container-bg-color);
     color: white;
     border: none;
     border-radius: 15px;
@@ -92,7 +92,7 @@ export default {
   }
 
   .input-layout{
-    background-color: var(--cotainer-bg-color);
+    background-color: var(--container-bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,12 +123,10 @@ export default {
     opacity: 55%;
   }
   .inputs div input{
-    font-size: 12pt;
+    width: 190px;
+    font-size: 13pt;
     margin-left: 5px;
     border: none;
-  }
-  .inputs div input:focus{
-    outline: none;
   }
   .inputs div:nth-child(2){
     margin-top: 12px;
@@ -137,7 +135,7 @@ export default {
     border: 1px solid white;
     border-radius: 10px;
     background-color: white;
-    color: var(--cotainer-bg-color);
+    color: var(--container-bg-color);
     font-weight: 800;
     font-size: 15pt;
     width: 60px;
@@ -151,7 +149,7 @@ export default {
     font-weight: 800;
     font-size: 13pt;
     border: 1px solid white;
-    background-color: var(--cotainer-bg-color);
+    background-color: var(--container-bg-color);
     color: white;
     border-radius: 10px;
     width: 150px;
