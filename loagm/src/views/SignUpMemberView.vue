@@ -1,6 +1,6 @@
 <template>
   <!-- 가입 후 뜨는 길드코드 안내 모달창 -->
-  <div v-if="signUpSuccess == true">
+  <div class="modal" v-if="signUpSuccess == true">
     <div>
       <p>
         가입을 축하드립니다!<br>
@@ -44,6 +44,45 @@ export default {
 </script>
 
 <style scoped>
+/* 모달창 스타일 */
+  .modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal p{
+    border-radius: 15px;
+    background-color: var(--container-bg-color);
+    color: white;
+    border: none;
+    width: 600px;
+    height: 300px;
+    font-size: 15pt;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal button{
+    background-color: white;
+    border: 2px solid var(--container-bg-color);
+    color: var(--container-bg-color);
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 230px;
+    height: 65px;
+    font-size: 16pt;
+    font-weight: 700;
+  }
+
+  /* 본 페이지 스타일 */
   .container{
     margin-top: 160px;
   }
