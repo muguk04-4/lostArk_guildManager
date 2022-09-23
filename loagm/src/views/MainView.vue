@@ -1,6 +1,6 @@
 <template>
   <!-- 도움말 모달창 -->
-  <div v-if="helpBtn == true">
+  <div class="modal" v-if="helpBtn == true">
     <div>
       <h3>도움말</h3>
       <p>쏼라 쏼라 블라ㅜㄷ라불다ㅜ받ㄹ 나는 도움말이다 끼요요용ㄹ곡ㄺ롤</p>
@@ -8,7 +8,7 @@
   </div>
 
   <!-- 길드장 메뉴 모달창 -->
-  <div v-if="isGuildMaster == true && menuBtn == true">
+  <div class="modal" v-if="isGuildMaster == true && menuBtn == true">
     <div>
       <button>X</button>
       <div>
@@ -27,7 +27,7 @@
   </div>
 
   <!-- 길드원 메뉴 모달창 -->
-  <div v-if="isGuildMember == true && menuBtn == true">
+  <div class="modal" v-if="isGuildMember == true && menuBtn == true">
     <div>
       <button>X</button>
       <div>
@@ -119,8 +119,17 @@ export default {
 </script>
 
 <style scoped>
-  div{
-    color: var(--cotainer-bg-color);
-    font-size: 10pt;
+  /* 모달창 기본 스타일 */
+  .modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 </style>
