@@ -39,22 +39,22 @@
   </div>
 
   <!-- 메인 현황판 html -->
-  <div>
+  <div class="container">
     <!-- navBar -->
-    <div>
+    <div class="navbar">
       <!-- 길드명 캐릭검색 -->
-      <div>
+      <div class="first">
         <div>
-          <h1>{{ guildName }}</h1>
+          <h2>{{ guildName }}</h2>
         </div>
         <div>
-          <input type="text">
+          <input type="text" placeholder="원정대, 캐릭터 이름">
           <button>검색</button>
         </div>
       </div>
 
       <!-- 정렬버튼 -->
-      <div>
+      <div class="second">
         <div>
           <button>발탄</button>
           <button>비아</button>
@@ -69,7 +69,7 @@
       </div>
 
       <!-- 메뉴 및 도움말 -->
-      <div>
+      <div class="third">
         <div>
           <button>?</button>
         </div>
@@ -80,7 +80,7 @@
     </div>
 
     <!-- 현황판이 들어갈 곳 -->
-    <div>
+    <div class="account-table">
       <table>
         <!-- 원정대 들어갈 곳 -->
         <thead>
@@ -98,7 +98,7 @@
       </table>
     </div>
 
-    <button>Top</button>
+    <button class="to-top">Top</button>
   </div>
 </template>
 
@@ -111,8 +111,7 @@ export default {
       helpBtn: false,
       menuBtn: false,
       isGuildMaster: false,
-      isGuildMember: true,
-      isEmpty: false
+      isGuildMember: true
     }
   }
 }
@@ -131,5 +130,114 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  /* 본 페이지 스타일 */
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  /* 윗부분 */
+  .navbar{
+    display: flex;
+    gap: 10px;
+  }
+  .first{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  .first div{
+    display: flex;
+  }
+  .first div:nth-child(1){
+    margin-bottom: -12px;
+  }
+  .first h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: var(--container-bg-color);
+    color: white;
+    min-width: 150px;
+    padding-right: 25px;
+    padding-left: 25px;
+    height: 55px;
+  }
+  .first input{
+    font-size: 13pt;
+    border-radius: 10px;
+    border: 1px solid var(--container-bg-color);
+    padding: 5px;
+  }
+  .first button{
+    background-color: var(--container-bg-color);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 12pt;
+  }
+  .second{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: var(--container-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    gap: 10px;
+  }
+  .second div{
+    display: flex;
+    gap: 10px;
+  }
+  .second div button{
+    width: 55px;
+    height: 40px;
+    font-size: 14pt;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+  }
+  .second div:nth-child(2) button{
+    width: 130px;
+  }
+  .third{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .third div{
+    display: flex;
+  }
+  .third div button{
+    width: 55px;
+    height: 40px;
+    font-size: 14pt;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+  }
+
+  /* 윗부분 */
+  .account-table{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .to-top{
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 </style>

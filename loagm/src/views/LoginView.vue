@@ -148,9 +148,9 @@ export default {
   .signup-layout button{
     font-weight: 800;
     font-size: 13pt;
-    border: 1px solid white;
-    background-color: var(--container-bg-color);
-    color: white;
+    border: 2px solid var(--container-bg-color);
+    background-color: white;
+    color: var(--container-bg-color);
     border-radius: 10px;
     width: 150px;
     height: 50px;

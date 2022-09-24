@@ -38,7 +38,7 @@ export default {
     return {
       guildName: '임시길넴',
       guildCode: 'WEFH*#HINOVS(8',
-      signUpSuccess: true
+      signUpSuccess: false
     }
   }
 }
