@@ -10,8 +10,13 @@
 </template>
 
 <style>
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter-VariableFont_slnt,wght.ttf) format("truetype");
+}
 body {
   background-color: rgb(252, 245, 255);
+  font-family: "Inter";
 }
 input:focus{
   outline: none;

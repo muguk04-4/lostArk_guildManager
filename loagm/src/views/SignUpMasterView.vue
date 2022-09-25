@@ -1,6 +1,6 @@
 <template>
   <!-- 가입 후 뜨는 길드코드 안내 모달창 -->
-  <div class="modal" v-if="signUpSuccess == true">
+  <div class="modal" v-if="isSignUpSuccess == true">
     <div>
       <p>
         {{ guildName }} 길드의 길드 코드는 <br>{{ guildCode }} 입니다.<br>길드원들에게 알려주세요! <br>&#40; 관리자는 설정에서 길드 코드를 다시 확인할 수 있습니다. &#41;
@@ -38,7 +38,7 @@ export default {
     return {
       guildName: '임시길넴',
       guildCode: 'WEFH*#HINOVS(8',
-      signUpSuccess: false
+      isSignUpSuccess: false
     }
   }
 }

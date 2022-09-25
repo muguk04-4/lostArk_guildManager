@@ -1,6 +1,6 @@
 <template>
   <!-- 가입 후 뜨는 길드코드 안내 모달창 -->
-  <div class="modal" v-if="signUpSuccess == true">
+  <div class="modal" v-if="isSignUpSuccess == true">
     <div>
       <p>
         가입을 축하드립니다!<br>
@@ -37,7 +37,7 @@
 export default {
   data () {
     return {
-      signUpSuccess: false
+      isSignUpSuccess: false
     }
   }
 }
@@ -62,8 +62,8 @@ export default {
     background-color: var(--container-bg-color);
     color: white;
     border: none;
-    width: 600px;
-    height: 300px;
+    width: 500px;
+    height: 200px;
     font-size: 15pt;
     line-height: 140%;
     display: flex;

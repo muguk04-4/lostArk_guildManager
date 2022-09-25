@@ -1,7 +1,8 @@
 <template>
   <!-- 도움말 모달창 -->
   <div class="modal" v-if="helpBtn == true">
-    <div>
+    <div class="help-box">
+      <button class="close">X</button>
       <h3>도움말</h3>
       <p>쏼라 쏼라 블라ㅜㄷ라불다ㅜ받ㄹ 나는 도움말이다 끼요요용ㄹ곡ㄺ롤</p>
     </div>
@@ -9,8 +10,8 @@
 
   <!-- 길드장 메뉴 모달창 -->
   <div class="modal" v-if="isGuildMaster == true && menuBtn == true">
-    <div>
-      <button>X</button>
+    <div class="menu-box">
+      <button class="close">X</button>
       <div>
         <input type="text">
         <button>복사</button>
@@ -29,7 +30,7 @@
   <!-- 길드원 메뉴 모달창 -->
   <div class="modal" v-if="isGuildMember == true && menuBtn == true">
     <div>
-      <button>X</button>
+      <button class="close">X</button>
       <div>
         <table></table>
         <button>+</button>
@@ -80,8 +81,8 @@
     </div>
 
     <!-- 현황판이 들어갈 곳 -->
-    <div class="account-table">
-      <table>
+    <div class="container">
+      <table class="account-table">
         <!-- 원정대 들어갈 곳 -->
         <thead>
           <tr>{{ accountName }}</tr>
@@ -107,8 +108,8 @@ export default {
   data () {
     return {
       guildName: '임시길넴',
-      accountName: '임시길넴',
-      helpBtn: false,
+      accountName: '임시원넴',
+      helpBtn: true,
       menuBtn: false,
       isGuildMaster: false,
       isGuildMember: true
@@ -131,6 +132,32 @@ export default {
     align-items: center;
     justify-content: center;
   }
+  .help-box{
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
+    color: white;
+    width: 600px;
+    height: 600px;
+    position: relative;
+  }
+  .menu-box{
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
+    color: white;
+    width: 600px;
+    height: 600px;
+    position: relative;
+  }
+  .close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 30px;
+    border: 2px solid var(--container-bg-color);
+    border-radius: 0px 10px 0px 10px;
+    color: var(--container-bg-color);
+  }
 
   /* 본 페이지 스타일 */
   .container{
@@ -143,7 +170,6 @@ export default {
     gap: 10px;
   }
   .first{
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -182,7 +208,6 @@ export default {
     font-size: 12pt;
   }
   .second{
-    border: 1px solid black;
     border-radius: 15px;
     background-color: var(--container-bg-color);
     display: flex;
@@ -209,7 +234,6 @@ export default {
     width: 130px;
   }
   .third{
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -223,17 +247,21 @@ export default {
     width: 55px;
     height: 40px;
     font-size: 14pt;
-    border: 1px solid black;
+    font-weight: 700;
+    border: 2px solid var(--container-bg-color);
     border-radius: 10px;
     background-color: white;
-    color: black;
+    color: var(--container-bg-color);
   }
 
-  /* 윗부분 */
+  /* 아랫부분 */
   .account-table{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+  }
+  .account-table thead{
+    display: flex;
   }
   .to-top{
     position: absolute;
