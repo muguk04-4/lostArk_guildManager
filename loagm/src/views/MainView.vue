@@ -23,19 +23,21 @@
       <div>
         <table></table>
       </div>
-      <button>폭파</button>
+      <button class="logout">로그아웃</button>
+      <button class="secession">탈퇴</button>
     </div>
   </div>
 
   <!-- 길드원 메뉴 모달창 -->
   <div class="modal" v-if="isGuildMember == true && menuBtn == true">
-    <div>
+    <div class="menu-box">
       <button class="close">X</button>
       <div>
         <table></table>
         <button>+</button>
       </div>
-      <button>탈퇴</button>
+      <button class="logout">로그아웃</button>
+      <button class="secession">탈퇴</button>
     </div>
   </div>
 
@@ -99,7 +101,7 @@
       </table>
     </div>
 
-    <button class="to-top">Top</button>
+    <button class="to-top">TOP</button>
   </div>
 </template>
 
@@ -109,8 +111,9 @@ export default {
     return {
       guildName: '임시길넴',
       accountName: '임시원넴',
-      helpBtn: true,
-      menuBtn: false,
+      helpBtn: false,
+      menuBtn: true,
+      // 회원 데이터
       isGuildMaster: false,
       isGuildMember: true
     }
@@ -144,8 +147,9 @@ export default {
     background-color: var(--container-bg-color);
     border-radius: 10px;
     color: white;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    min-height: 500px;
+    padding-bottom: 80px;
     position: relative;
   }
   .close{
@@ -157,6 +161,17 @@ export default {
     border: 2px solid var(--container-bg-color);
     border-radius: 0px 10px 0px 10px;
     color: var(--container-bg-color);
+  }
+  .logout{
+    position: absolute;
+    bottom: 8px;
+    right: 58px;
+  }
+  .secession{
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    color: red;
   }
 
   /* 본 페이지 스타일 */
@@ -264,8 +279,17 @@ export default {
     display: flex;
   }
   .to-top{
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: -1;
+    height: 70px;
+    width: 50px;
+    border-radius: 10px;
+    border: 2px solid var(--container-bg-color);
+    color: var(--container-bg-color);
+    background-color: white;
+    font-size: 12pt;
+    font-weight: 700;
   }
 </style>
