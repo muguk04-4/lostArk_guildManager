@@ -2,7 +2,7 @@
   <!-- 도움말 모달창 -->
   <div class="modal" v-if="helpBtn == true">
     <div class="help-box">
-      <button class="close">X</button>
+      <button id="close" @click="btnClick" class="close">X</button>
       <h3>도움말</h3>
       <p>쏼라 쏼라 블라ㅜㄷ라불다ㅜ받ㄹ 나는 도움말이다 끼요요용ㄹ곡ㄺ롤</p>
     </div>
@@ -11,7 +11,7 @@
   <!-- 길드장 메뉴 모달창 -->
   <div class="modal" v-if="isGuildMaster == true && menuBtn == true">
     <div class="menu-box">
-      <button class="close">X</button>
+      <button id="close" @click="btnClick" class="close">X</button>
       <div>
         <input type="text">
         <button>복사</button>
@@ -31,7 +31,7 @@
   <!-- 길드원 메뉴 모달창 -->
   <div class="modal" v-if="isGuildMember == true && menuBtn == true">
     <div class="menu-box">
-      <button class="close">X</button>
+      <button id="close" @click="btnClick" class="close">X</button>
       <div>
         <table></table>
         <button>+</button>
@@ -74,10 +74,10 @@
       <!-- 메뉴 및 도움말 -->
       <div class="third">
         <div>
-          <button>?</button>
+          <button id="help" @click="btnClick">?</button>
         </div>
         <div>
-          <button>메뉴</button>
+          <button id="menu" @click="btnClick">메뉴</button>
         </div>
       </div>
     </div>
@@ -112,10 +112,24 @@ export default {
       guildName: '임시길넴',
       accountName: '임시원넴',
       helpBtn: false,
-      menuBtn: true,
+      menuBtn: false,
       // 회원 데이터
       isGuildMaster: false,
       isGuildMember: true
+    }
+  },
+  methods: {
+    btnClick (event) {
+      if (event.target.id === 'help') {
+        this.helpBtn = true
+      }
+      if (event.target.id === 'menu') {
+        this.menuBtn = true
+      }
+      if (event.target.id === 'close') {
+        this.helpBtn = false
+        this.menuBtn = false
+      }
     }
   }
 }
