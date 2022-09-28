@@ -23,8 +23,8 @@
       <div>
         <table></table>
       </div>
-      <button class="logout">로그아웃</button>
-      <button class="secession">탈퇴</button>
+      <router-link to="/"><button class="logout">로그아웃</button></router-link>
+      <router-link to="/"><button class="secession">탈퇴</button></router-link>
     </div>
   </div>
 
@@ -36,8 +36,8 @@
         <table></table>
         <button>+</button>
       </div>
-      <button class="logout">로그아웃</button>
-      <button class="secession">탈퇴</button>
+      <router-link to="/"><button class="logout">로그아웃</button></router-link>
+      <router-link to="/"><button class="secession">탈퇴</button></router-link>
     </div>
   </div>
 
@@ -238,12 +238,13 @@ export default {
   }
   .second{
     border-radius: 15px;
-    background-color: var(--container-bg-color);
+    border: 3px solid var(--container-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 350px;
+    margin-top: 10px;
     gap: 10px;
   }
   .second div{

@@ -1,8 +1,8 @@
 <template>
   <!-- 회원가입 선택 모달창 -->
   <div class="modal" v-if="signUpBtn == true">
-    <button>저는 <span>길드장</span>이에요!</button>
-    <button>저는 <span>길드원</span>이에요!</button>
+    <router-link to="/signup_master"><button>저는 <span>길드장</span>이에요!</button></router-link>
+    <router-link to="/signup_member"><button>저는 <span>길드원</span>이에요!</button></router-link>
   </div>
 
   <!-- 메인 로그인 페이지html -->
@@ -21,7 +21,7 @@
           <input type="password" id="userPw">
         </div>
       </div>
-        <button id="logInBtn">확인</button>
+        <router-link to="/main"><button id="logInBtn">확인</button></router-link>
     </div>
     <div class="signup-layout">
       <button id="signUpBtn">회원가입</button>
