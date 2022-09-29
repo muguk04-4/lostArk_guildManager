@@ -193,6 +193,10 @@ export default {
     display: flex;
     flex-direction: column;
   }
+  button:hover{
+    background-color: var(--container-bg-color);
+    color: white;
+  }
   /* 윗부분 */
   .navbar{
     display: flex;
