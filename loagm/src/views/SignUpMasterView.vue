@@ -6,7 +6,7 @@
         {{ guildName }} 길드의 길드 코드는 <br>{{ guildCode }} 입니다.<br>길드원들에게 알려주세요! <br>&#40; 관리자는 설정에서 길드 코드를 다시 확인할 수 있습니다. &#41;
       </p>
     </div>
-    <button>확인 및 코드 복사</button>
+    <router-link to="/"><button @click="btnClick" id="check2">확인 및 코드 복사</button></router-link>
   </div>
 
   <!-- 길드장 회원가입 화면 -->
@@ -28,7 +28,7 @@
         <span>길드 이름</span><input type="text" placeholder="Guildname">
       </div>
     </div>
-    <button>확인</button>
+    <button @click="btnClick" id="check1">확인</button>
   </div>
 </template>
 
@@ -39,6 +39,13 @@ export default {
       guildName: '임시길넴',
       guildCode: 'WEFH*#HINOVS(8',
       isSignUpSuccess: false
+    }
+  },
+  methods: {
+    btnClick (event) {
+      if (event.target.id === 'check1') {
+        this.isSignUpSuccess = true
+      }
     }
   }
 }

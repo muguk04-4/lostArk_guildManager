@@ -14,17 +14,17 @@
       <div class="inputs">
         <div>
           <img src="../assets/icon/id.png" alt="">
-          <input type="text" id="userId">
+          <input @keyup.enter="submit" type="text" id="userId">
         </div>
         <div>
           <img src="../assets/icon/pw.png" alt="">
-          <input type="password" id="userPw">
+          <input @keyup.enter="submit" type="password" id="userPw">
         </div>
       </div>
         <router-link to="/main"><button id="logInBtn">확인</button></router-link>
     </div>
     <div class="signup-layout">
-      <button id="signUpBtn">회원가입</button>
+      <button @click="btnClick" id="signUpBtn">회원가입</button>
     </div>
   </div>
 </template>
@@ -34,6 +34,11 @@ export default {
   data () {
     return {
       signUpBtn: false
+    }
+  },
+  methods: {
+    btnClick () {
+      this.signUpBtn = true
     }
   }
 }
@@ -51,22 +56,21 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    gap: 50px;
   }
   .modal button{
     border-radius: 15px;
-    background-color: var(--container-bg-color);
-    color: white;
-    border: none;
+    background-color: white;
+    color: var(--container-bg-color);
+    border: 5px solid var(--container-bg-color);
     width: 300px;
     height: 140px;
     font-size: 15pt;
-  }
-  .modal button:nth-child(2){
-    margin-left: 80px;
+    font-weight: 700;
   }
   .modal button span{
     font-size: 20pt;
-    font-weight: 700;
   }
 
   /* 본 페이지 스타일 */

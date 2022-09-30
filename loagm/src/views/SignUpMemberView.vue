@@ -7,7 +7,7 @@
         로그인 페이지로 이동해 다시 로그인해주세요!
       </p>
     </div>
-    <button>확인</button>
+    <router-link to="/"><button id="check2">확인</button></router-link>
   </div>
 
   <!-- 길드원 회원가입 화면 -->
@@ -29,7 +29,7 @@
         <span>길드 코드</span><input type="text" placeholder="Code">
       </div>
     </div>
-    <button>확인</button>
+    <button @click="btnClick" id="check1">확인</button>
   </div>
 </template>
 
@@ -38,6 +38,13 @@ export default {
   data () {
     return {
       isSignUpSuccess: false
+    }
+  },
+  methods: {
+    btnClick (event) {
+      if (event.target.id === 'check1') {
+        this.isSignUpSuccess = true
+      }
     }
   }
 }

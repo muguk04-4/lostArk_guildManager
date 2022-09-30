@@ -51,7 +51,7 @@
           <h2>{{ guildName }}</h2>
         </div>
         <div>
-          <input type="text" placeholder="원정대, 캐릭터 이름">
+          <input @keyup.enter="submit" type="text" placeholder="원정대, 캐릭터 이름">
           <button>검색</button>
         </div>
       </div>
@@ -59,15 +59,15 @@
       <!-- 정렬버튼 -->
       <div class="second">
         <div>
-          <button>발탄</button>
-          <button>비아</button>
-          <button>쿠크</button>
-          <button>아브</button>
-          <button>일리</button>
+          <button class="bal">발탄</button>
+          <button class="via">비아</button>
+          <button class="kuk">쿠크</button>
+          <button class="abr">아브</button>
+          <button class="ili">일리</button>
         </div>
         <div>
-          <button>딜러</button>
-          <button>서폿</button>
+          <button class="deal">딜러</button>
+          <button class="sup">서폿</button>
         </div>
       </div>
 
@@ -101,7 +101,7 @@
       </table>
     </div>
 
-    <button class="to-top">TOP</button>
+    <button id="top" class="to-top" @click="btnClick">TOP</button>
   </div>
 </template>
 
@@ -130,6 +130,9 @@ export default {
         this.helpBtn = false
         this.menuBtn = false
       }
+      if (event.target.id === 'top') {
+        document.documentElement.scrollTop = 0
+      }
     }
   }
 }
@@ -148,6 +151,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 2;
   }
   .help-box{
     background-color: var(--container-bg-color);
@@ -192,10 +196,7 @@ export default {
   .container{
     display: flex;
     flex-direction: column;
-  }
-  button:hover{
-    background-color: var(--container-bg-color);
-    color: white;
+    height: 2000px;
   }
   /* 윗부분 */
   .navbar{
@@ -229,20 +230,21 @@ export default {
   }
   .first input{
     font-size: 13pt;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     border: 1px solid var(--container-bg-color);
     padding: 5px;
   }
   .first button{
     background-color: var(--container-bg-color);
     color: white;
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
     border: none;
     font-size: 12pt;
   }
   .second{
     border-radius: 15px;
     border: 3px solid var(--container-bg-color);
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -259,13 +261,42 @@ export default {
     width: 55px;
     height: 40px;
     font-size: 14pt;
-    border: 1px solid black;
+    border: 2px solid var(--container-bg-color);
     border-radius: 10px;
     background-color: white;
     color: black;
+    transition: background-color 0.2s, color 0.2s;
   }
   .second div:nth-child(2) button{
-    width: 130px;
+    width: 150px;
+  }
+  .bal:hover{
+    background-color: #66525e;
+    color: #82cdde;
+  }
+  .via:hover{
+    background-color: #660033;
+    color: #ea2c8b;
+  }
+  .kuk:hover{
+    background-color: #000000;
+    color: #ff0000;
+  }
+  .abr:hover{
+    background-color: #844fce;
+    color: #aea8d2;
+  }
+  .ili:hover{
+    background-color: #c73720;
+    color: #42ad25;
+  }
+  .deal:hover{
+    background-color: red;
+    color: white;
+  }
+  .sup:hover{
+    background-color: green;
+    color: white;
   }
   .third{
     display: flex;
@@ -301,7 +332,7 @@ export default {
     position: fixed;
     right: 10px;
     bottom: 10px;
-    z-index: -1;
+    z-index: 1;
     height: 70px;
     width: 50px;
     border-radius: 10px;
