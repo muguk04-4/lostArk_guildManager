@@ -1,5 +1,5 @@
+<!-- 테스트용 라우터 링크. 완성시 제거
 <template>
-  <!-- 테스트용 라우터 링크. 완성시 제거 -->
   <nav>
     <router-link to="/">login</router-link> |
     <router-link to="/main">main</router-link> |
@@ -8,6 +8,7 @@
   </nav>
   <router-view/>
 </template>
+-->
 
 <style>
 @font-face {
