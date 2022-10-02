@@ -87,7 +87,7 @@ export default {
     color: white;
     border: none;
     border-radius: 15px;
-    height: 55px;
+    height: 53px;
     width: 300px;
     font-size: 8pt;
     display: flex;
