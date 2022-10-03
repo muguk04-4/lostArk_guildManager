@@ -109,7 +109,7 @@
 export default {
   data () {
     return {
-      guildName: '임시길넴',
+      guildName: 'opentheGate',
       accountName: '임시원넴',
       helpBtn: false,
       menuBtn: false,

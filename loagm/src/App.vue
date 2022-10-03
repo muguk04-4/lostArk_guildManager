@@ -1,23 +1,20 @@
-<!-- 테스트용 라우터 링크. 완성시 제거
 <template>
-  <nav>
-    <router-link to="/">login</router-link> |
-    <router-link to="/main">main</router-link> |
-    <router-link to="/signup_master">signup_master</router-link> |
-    <router-link to="/signup_member">signup_member</router-link>
-  </nav>
   <router-view/>
 </template>
--->
 
 <style>
+/* 영문판이 필요할 때 쓸 inter 폰트
 @font-face {
   font-family: "Inter";
   src: url(./fonts/Inter-VariableFont_slnt,wght.ttf) format("truetype");
+} */
+@font-face {
+  font-family: "NanumGothic";
+  src: url(./fonts/NanumGothic-Regular.ttf) format("truetype");
 }
 body {
   background-color: rgb(252, 245, 255);
-  font-family: "Inter";
+  font-family: "NanumGothic";
 }
 input:focus{
   outline: none;
