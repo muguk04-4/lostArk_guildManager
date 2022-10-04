@@ -81,7 +81,6 @@ export default {
     flex-direction: column;
     margin-top: 180px;
   }
-
   .webname-layout {
     background-color: var(--container-bg-color);
     color: white;
@@ -94,7 +93,6 @@ export default {
     align-items: center;
     justify-content: center;
   }
-
   .input-layout{
     background-color: var(--container-bg-color);
     display: flex;
