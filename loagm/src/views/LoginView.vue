@@ -1,6 +1,6 @@
 <template>
   <!-- 회원가입 선택 모달창 -->
-  <div class="modal" v-if="signUpBtn == true">
+  <div id="modal" @click="btnClick" class="modal" v-if="signUpBtn == true">
     <router-link to="/signup_master"><button>저는 <span>길드장</span>이에요!</button></router-link>
     <router-link to="/signup_member"><button>저는 <span>길드원</span>이에요!</button></router-link>
   </div>
@@ -37,8 +37,11 @@ export default {
     }
   },
   methods: {
-    btnClick () {
+    btnClick (event) {
       this.signUpBtn = true
+      if (event.target.id === 'modal') {
+        this.signUpBtn = false
+      }
     }
   }
 }
@@ -74,6 +77,13 @@ export default {
   }
 
   /* 본 페이지 스타일 */
+  body button{
+  transition: background-color 0.15s, color 0.15s;
+  }
+  body button:hover{
+    background-color: var(--container-bg-color);
+    color: white;
+  }
   .container{
     display: flex;
     align-items: center;
@@ -134,7 +144,7 @@ export default {
     margin-top: 12px;
   }
   .input-layout button{
-    border: 1px solid white;
+    border: 3px solid white;
     border-radius: 10px;
     background-color: white;
     color: var(--container-bg-color);
@@ -150,7 +160,7 @@ export default {
   .signup-layout button{
     font-weight: 800;
     font-size: 13pt;
-    border: 2px solid var(--container-bg-color);
+    border: 3px solid var(--container-bg-color);
     background-color: white;
     color: var(--container-bg-color);
     border-radius: 10px;

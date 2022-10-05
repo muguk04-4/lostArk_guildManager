@@ -1,6 +1,6 @@
 <template>
   <!-- 도움말 모달창 -->
-  <div class="modal" v-if="helpBtn == true">
+  <div id="modal" @click="btnClick" class="modal" v-if="helpBtn == true">
     <div class="help-box">
       <button id="close" @click="btnClick" class="close">X</button>
       <h3>도움말</h3>
@@ -9,7 +9,7 @@
   </div>
 
   <!-- 길드장 메뉴 모달창 -->
-  <div class="modal" v-if="isGuildMaster == true && menuBtn == true">
+  <div id="modal" @click="btnClick" class="modal" v-if="isGuildMaster == true && menuBtn == true">
     <div class="menu-box">
       <button id="close" @click="btnClick" class="close">X</button>
       <div>
@@ -29,7 +29,7 @@
   </div>
 
   <!-- 길드원 메뉴 모달창 -->
-  <div class="modal" v-if="isGuildMember == true && menuBtn == true">
+  <div id="modal" @click="btnClick" class="modal" v-if="isGuildMember == true && menuBtn == true">
     <div class="menu-box">
       <button id="close" @click="btnClick" class="close">X</button>
       <div>
@@ -126,7 +126,7 @@ export default {
       if (event.target.id === 'menu') {
         this.menuBtn = true
       }
-      if (event.target.id === 'close') {
+      if (event.target.id === 'close' || event.target.id === 'modal') {
         this.helpBtn = false
         this.menuBtn = false
       }

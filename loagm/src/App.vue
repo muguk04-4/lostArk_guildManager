@@ -19,14 +19,6 @@ body {
 input:focus{
   outline: none;
 }
-/* 이거 왜 작동안하지? */
-/* button{
-  transition: background-color 0.15s, color 0.15s;
-}
-button:hover{
-  background-color: var(--container-bg-color);
-  color: white;
-} */
 
 #app {
   -webkit-font-smoothing: antialiased;
