@@ -317,6 +317,11 @@ export default {
     border-radius: 10px;
     background-color: white;
     color: var(--container-bg-color);
+    transition: background 0.15s, color 0.15s;
+  }
+  .third div button:hover{
+    background-color: var(--container-bg-color);
+    color: white;
   }
 
   /* 아랫부분 */
