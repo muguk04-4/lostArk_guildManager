@@ -109,7 +109,7 @@
 export default {
   data () {
     return {
-      guildName: 'opentheGate',
+      guildName: '임시길넴',
       accountName: '임시원넴',
       helpBtn: false,
       menuBtn: false,
@@ -346,5 +346,10 @@ export default {
     background-color: white;
     font-size: 12pt;
     font-weight: 700;
+    transition: background 0.15s, color 0.15s;
+  }
+  .to-top:hover{
+    background-color: var(--container-bg-color);
+    color: white;
   }
 </style>
