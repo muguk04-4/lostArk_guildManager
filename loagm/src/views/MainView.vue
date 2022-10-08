@@ -141,34 +141,34 @@ export default {
 <style scoped>
   /* 모달창 기본 스타일 */
   .modal{
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .help-box{
-    background-color: var(--container-bg-color);
-    border-radius: 10px;
-    color: white;
+    position: relative;
     width: 600px;
     height: 600px;
-    position: relative;
+    background-color: var(--container-bg-color);
+    color: white;
+    border-radius: 10px;
   }
   .menu-box{
-    background-color: var(--container-bg-color);
-    border-radius: 10px;
-    color: white;
+    position: relative;
+    padding-bottom: 80px;
     width: 800px;
     min-height: 500px;
-    padding-bottom: 80px;
-    position: relative;
+    background-color: var(--container-bg-color);
+    color: white;
+    border-radius: 10px;
   }
   .close{
     position: absolute;
@@ -176,9 +176,9 @@ export default {
     top: 0;
     width: 40px;
     height: 30px;
+    color: var(--container-bg-color);
     border: 2px solid var(--container-bg-color);
     border-radius: 0px 10px 0px 10px;
-    color: var(--container-bg-color);
   }
   .logout{
     position: absolute;
@@ -196,6 +196,7 @@ export default {
   .container{
     display: flex;
     flex-direction: column;
+    /* ------------ 완성 후 height 제거 */
     height: 2000px;
   }
   /* 윗부분 */
@@ -220,51 +221,51 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    background-color: var(--container-bg-color);
-    color: white;
-    min-width: 150px;
     padding-right: 25px;
     padding-left: 25px;
+    min-width: 150px;
     height: 55px;
+    background-color: var(--container-bg-color);
+    color: white;
+    border-radius: 25px;
   }
   .first input{
     font-size: 13pt;
-    border-radius: 10px 0px 0px 10px;
-    border: 1px solid var(--container-bg-color);
     padding: 5px;
+    border: 1px solid var(--container-bg-color);
+    border-radius: 10px 0px 0px 10px;
   }
   .first button{
+    font-size: 12pt;
     background-color: var(--container-bg-color);
     color: white;
-    border-radius: 0px 10px 10px 0px;
     border: none;
-    font-size: 12pt;
+    border-radius: 0px 10px 10px 0px;
   }
   .second{
-    border-radius: 15px;
-    border: 3px solid var(--container-bg-color);
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
     margin-top: 10px;
     gap: 10px;
+    width: 350px;
+    background-color: white;
+    border: 3px solid var(--container-bg-color);
+    border-radius: 15px;
   }
   .second div{
     display: flex;
     gap: 10px;
   }
   .second div button{
+    font-size: 14pt;
     width: 55px;
     height: 40px;
-    font-size: 14pt;
-    border: 2px solid var(--container-bg-color);
-    border-radius: 10px;
     background-color: white;
     color: black;
+    border: 2px solid var(--container-bg-color);
+    border-radius: 10px;
     transition: background-color 0.2s, color 0.2s;
   }
   .second div:nth-child(2) button{
@@ -309,14 +310,14 @@ export default {
     display: flex;
   }
   .third div button{
-    width: 55px;
-    height: 40px;
     font-size: 14pt;
     font-weight: 700;
-    border: 2px solid var(--container-bg-color);
-    border-radius: 10px;
+    width: 55px;
+    height: 40px;
     background-color: white;
     color: var(--container-bg-color);
+    border: 2px solid var(--container-bg-color);
+    border-radius: 10px;
     transition: background 0.15s, color 0.15s;
   }
   .third div button:hover{
@@ -326,9 +327,9 @@ export default {
 
   /* 아랫부분 */
   .account-table{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
   }
   .account-table thead{
     display: flex;
@@ -338,14 +339,14 @@ export default {
     right: 10px;
     bottom: 10px;
     z-index: 1;
-    height: 70px;
-    width: 50px;
-    border-radius: 10px;
-    border: 2px solid var(--container-bg-color);
-    color: var(--container-bg-color);
-    background-color: white;
     font-size: 12pt;
     font-weight: 700;
+    width: 50px;
+    height: 70px;
+    background-color: white;
+    color: var(--container-bg-color);
+    border: 2px solid var(--container-bg-color);
+    border-radius: 10px;
     transition: background 0.15s, color 0.15s;
   }
   .to-top:hover{

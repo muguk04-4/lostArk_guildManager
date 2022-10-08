@@ -50,27 +50,27 @@ export default {
 <style scoped>
   /* 모달 스타일 */
   .modal{
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 1;
     gap: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .modal button{
-    border-radius: 15px;
+    font-size: 15pt;
+    font-weight: 700;
+    width: 300px;
+    height: 140px;
     background-color: white;
     color: var(--container-bg-color);
     border: 5px solid var(--container-bg-color);
-    width: 300px;
-    height: 140px;
-    font-size: 15pt;
-    font-weight: 700;
+    border-radius: 15px;
   }
   .modal button span{
     font-size: 20pt;
@@ -78,7 +78,7 @@ export default {
 
   /* 본 페이지 스타일 */
   body button{
-  transition: background-color 0.15s, color 0.15s;
+    transition: background-color 0.15s, color 0.15s;
   }
   body button:hover{
     background-color: var(--container-bg-color);
@@ -86,31 +86,31 @@ export default {
   }
   .container{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     margin-top: 180px;
   }
   .webname-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
+    width: 300px;
+    height: 53px;
     background-color: var(--container-bg-color);
     color: white;
     border: none;
     border-radius: 15px;
-    height: 53px;
-    width: 300px;
-    font-size: 8pt;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .input-layout{
-    background-color: var(--container-bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
     width: 400px;
     height: 150px;
-    margin-top: 40px;
+    background-color: var(--container-bg-color);
     border: none;
     border-radius: 10px;
   }
@@ -124,10 +124,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
     width: 270px;
     height: 40px;
     background-color: white;
+    border-radius: 20px;
   }
   .inputs div img{
     width: 50px;
@@ -135,23 +135,23 @@ export default {
     opacity: 55%;
   }
   .inputs div input{
-    width: 190px;
     font-size: 13pt;
     margin-left: 5px;
+    width: 190px;
     border: none;
   }
   .inputs div:nth-child(2){
     margin-top: 12px;
   }
   .input-layout button{
-    border: 3px solid white;
-    border-radius: 10px;
-    background-color: white;
-    color: var(--container-bg-color);
     font-weight: 800;
     font-size: 15pt;
     width: 60px;
     height: 90px;
+    background-color: white;
+    color: var(--container-bg-color);
+    border: 3px solid white;
+    border-radius: 10px;
   }
 
   .signup-layout{
@@ -160,11 +160,11 @@ export default {
   .signup-layout button{
     font-weight: 800;
     font-size: 13pt;
-    border: 3px solid var(--container-bg-color);
-    background-color: white;
-    color: var(--container-bg-color);
-    border-radius: 10px;
     width: 150px;
     height: 50px;
+    background-color: white;
+    color: var(--container-bg-color);
+    border: 3px solid var(--container-bg-color);
+    border-radius: 10px;
   }
 </style>
