@@ -63,41 +63,41 @@ export default {
 <style scoped>
 /* 모달창 스타일 */
   .modal{
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .modal p{
-    border-radius: 15px;
-    background-color: var(--container-bg-color);
-    color: white;
-    border: none;
-    width: 500px;
-    height: 200px;
-    font-size: 15pt;
-    line-height: 140%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 15pt;
+    line-height: 140%;
+    width: 500px;
+    height: 200px;
+    background-color: var(--container-bg-color);
+    color: white;
+    border: none;
+    border-radius: 15px;
   }
   .modal button{
-    background-color: white;
-    border: 2px solid var(--container-bg-color);
-    color: var(--container-bg-color);
     margin-top: 20px;
-    border-radius: 10px;
-    width: 230px;
-    height: 65px;
     font-size: 16pt;
     font-weight: 700;
+    width: 230px;
+    height: 65px;
+    background-color: white;
+    color: var(--container-bg-color);
+    border: 2px solid var(--container-bg-color);
+    border-radius: 10px;
     transition: background-color 0.15s, color 0.15s;
   }
   .modal button:hover{
@@ -114,66 +114,66 @@ export default {
     color: white;
   }
   .input-layout{
-    width: 580px;
-    height: 350px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    border: 3px dashed var(--container-bg-color);
-    background-color: white;
-    border-radius: 15px;
     padding-top: 30px;
     padding-bottom: 30px;
+    width: 580px;
+    height: 350px;
+    background-color: white;
+    border: 3px dashed var(--container-bg-color);
+    border-radius: 15px;
   }
   .input-layout div{
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
     gap: 15px;
     margin: 6px;
     background-color: var(--container-bg-color);
     border-radius: 30px;
   }
   .input-layout div span{
-    width: 140px;
     text-align: right;
     font-size: 13pt;
+    width: 140px;
     color: white;
   }
   .input-layout div input{
-    width: 280px;
-    height: 35px;
     padding-left: 12px;
     margin-right: 40px;
     font-size: 13pt;
-    border-radius: 20px;
+    width: 280px;
+    height: 35px;
     border: none;
+    border-radius: 20px;
   }
   .input-layout div:nth-child(1) {
     position: relative;
   }
   .input-layout button{
+    position: absolute;
+    right: 40px;
+    width: 80px;
+    height: 40px;
     background-color: white;
     border: 2px solid var(--container-bg-color);
     border-radius: 0px 20px 20px 0px;
-    width: 80px;
-    height: 40px;
-    position: absolute;
-    right: 40px;
     transition: background-color 0.15s, color 0.15s;
   }
   .check1{
-    background-color: white;
-    border: 2px solid var(--container-bg-color);
-    color: var(--container-bg-color);
     margin-top: 30px;
-    border-radius: 10px;
-    width: 150px;
-    height: 60px;
     font-size: 16pt;
     font-weight: 700;
+    width: 150px;
+    height: 60px;
+    background-color: white;
+    color: var(--container-bg-color);
+    border: 2px solid var(--container-bg-color);
+    border-radius: 10px;
     transition: background-color 0.15s, color 0.15s;
   }
 </style>
