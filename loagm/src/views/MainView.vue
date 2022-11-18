@@ -318,7 +318,7 @@ export default {
     color: var(--container-bg-color);
     border: 2px solid var(--container-bg-color);
     border-radius: 10px;
-    transition: background 0.15s, color 0.15s;
+    transition: all 0.15s;
   }
   .third div button:hover{
     background-color: var(--container-bg-color);
