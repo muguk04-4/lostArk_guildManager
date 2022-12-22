@@ -107,7 +107,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       guildName: '임시길넴',
       accountName: '임시원넴',
@@ -119,7 +119,7 @@ export default {
     }
   },
   methods: {
-    btnClick (event) {
+    btnClick(event) {
       if (event.target.id === 'help') {
         this.helpBtn = true
       }
@@ -134,7 +134,7 @@ export default {
         document.documentElement.scrollTop = 0
       }
     },
-    characterResearch (event) {
+    characterResearch(event) {
       var xmlHttpRequest = require("xmlhttprequest").XMLHttpRequest
       const xhr = new xmlHttpRequest()
       const JWT = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyIsImtpZCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyJ9.eyJpc3MiOiJodHRwczovL2x1ZHkuZ2FtZS5vbnN0b3ZlLmNvbSIsImF1ZCI6Imh0dHBzOi8vbHVkeS5nYW1lLm9uc3RvdmUuY29tL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IjEwMDAwMDAwMDAwMDA0OTcifQ.JwVQU-cdtyXpwFMJuZeRxPZb_pyz9JWY-2zZCwNwr2OaD2AbYSbHadZw8dIjO4b1f-BvmvEi0Xr6LDdnu0hWSZu3l1C7SIlf5IJPglJwtqPr2bTG2KVVjoq0SWmhxZkLNNuKBjXHG1ADGzem_3vtKnnbHkANBV8uZGzxfz3v-62bUMEAdKKdougJekJ-r22td_SPzv5jgpKlFAae1bHu2nYx7Q0Dz78pxWBnBLJsLCvs8enEFuYrAfD-IICDPntETTmSQjDOH23OkQJseVJnGfvzTyjcUvZO8d0M4-xv3p27D5E2tr9hUZyNnlDhxpncZ63FyMIT8FpUqM5hsPPDjA'
@@ -142,21 +142,20 @@ export default {
       xhr.open("GET", "https://developer-lostark.game.onstove.com/characters/%EA%B9%80%EC%B9%98%EA%B2%89%EC%A0%88%EC%9D%B4%EC%8B%A4%ED%8C%A8%ED%95%9C%EC%8B%9C%EA%B8%88%EC%B9%98/siblings", true);
       xhr.setRequestHeader('accept', 'application/json')
       xhr.setRequestHeader('authorization', `bearer ${JWT}`)
-      xhr.onreadystatechange = () => { 
-        if (xhr.readyState == xhr.DONE && xhr.status == 200 ) {
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState == xhr.DONE && xhr.status == 200) {
           let isJson = JSON.parse(xhr.responseText);
-          for(var i = 0 ; i < isJson.length ; i++){
-            if(isJson[i].ItemMaxLevel.length > 7){
-              console.log(isJson[i].ItemMaxLevel.substr(0, 5) +' '+ isJson[i].CharacterClassName+' '+ isJson[i].CharacterName);
+          for (var i = 0; i < isJson.length; i++) {
+            if (isJson[i].ItemMaxLevel.length > 7) {
+              console.log(isJson[i].ItemMaxLevel.substr(0, 5) + ' ' + isJson[i].CharacterClassName + ' ' + isJson[i].CharacterName);
             }
           }
         }
       };
       xhr.send();
     }
-    
-      }
-    }
+  }
+}
 </script>
 
 <style scoped>
