@@ -12,17 +12,7 @@
   <div id="modal" @click="btnClick" class="modal" v-if="isGuildMaster == true && menuBtn == true">
     <div class="menu-box">
       <button id="close" @click="btnClick" class="close">X</button>
-      <div>
-        <input type="text">
-        <button>복사</button>
-      </div>
-      <div>
-        <table></table>
-        <button>+</button>
-      </div>
-      <div>
-        <table></table>
-      </div>
+      <!-- 테이블 넣을 곳 -->
       <router-link to="/"><button class="logout">로그아웃</button></router-link>
       <router-link to="/"><button class="secession">탈퇴</button></router-link>
     </div>
@@ -32,8 +22,23 @@
   <div id="modal" @click="btnClick" class="modal" v-if="isGuildMember == true && menuBtn == true">
     <div class="menu-box">
       <button id="close" @click="btnClick" class="close">X</button>
-      <div>
-        <table></table>
+      <div class="guildMember-div">
+        <table class="guildMember-table">
+          <thead>
+            <tr>
+              <th>{{ accountName }}</th>
+              <th>직업</th>
+              <th>템렙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>임시캐릭넴</td>
+              <td>임시직업</td>
+              <td>임시템렙</td>
+            </tr>
+          </tbody>
+        </table>
         <button>+</button>
       </div>
       <router-link to="/"><button class="logout">로그아웃</button></router-link>
@@ -107,7 +112,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       guildName: '임시길넴',
       accountName: '임시원넴',
@@ -119,7 +124,7 @@ export default {
     }
   },
   methods: {
-    btnClick(event) {
+    btnClick (event) {
       if (event.target.id === 'help') {
         this.helpBtn = true
       }
@@ -134,31 +139,34 @@ export default {
         document.documentElement.scrollTop = 0
       }
     },
-    characterResearch(event) {
-      var xmlHttpRequest = require("xmlhttprequest").XMLHttpRequest
-      const xhr = new xmlHttpRequest()
-      const JWT = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyIsImtpZCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyJ9.eyJpc3MiOiJodHRwczovL2x1ZHkuZ2FtZS5vbnN0b3ZlLmNvbSIsImF1ZCI6Imh0dHBzOi8vbHVkeS5nYW1lLm9uc3RvdmUuY29tL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IjEwMDAwMDAwMDAwMDA0OTcifQ.JwVQU-cdtyXpwFMJuZeRxPZb_pyz9JWY-2zZCwNwr2OaD2AbYSbHadZw8dIjO4b1f-BvmvEi0Xr6LDdnu0hWSZu3l1C7SIlf5IJPglJwtqPr2bTG2KVVjoq0SWmhxZkLNNuKBjXHG1ADGzem_3vtKnnbHkANBV8uZGzxfz3v-62bUMEAdKKdougJekJ-r22td_SPzv5jgpKlFAae1bHu2nYx7Q0Dz78pxWBnBLJsLCvs8enEFuYrAfD-IICDPntETTmSQjDOH23OkQJseVJnGfvzTyjcUvZO8d0M4-xv3p27D5E2tr9hUZyNnlDhxpncZ63FyMIT8FpUqM5hsPPDjA'
-
-      xhr.open("GET", "https://developer-lostark.game.onstove.com/characters/%EA%B9%80%EC%B9%98%EA%B2%89%EC%A0%88%EC%9D%B4%EC%8B%A4%ED%8C%A8%ED%95%9C%EC%8B%9C%EA%B8%88%EC%B9%98/siblings", true);
-      xhr.setRequestHeader('accept', 'application/json')
-      xhr.setRequestHeader('authorization', `bearer ${JWT}`)
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState == xhr.DONE && xhr.status == 200) {
-          let isJson = JSON.parse(xhr.responseText);
-          for (var i = 0; i < isJson.length; i++) {
-            if (isJson[i].ItemMaxLevel.length > 7) {
-              console.log(isJson[i].ItemMaxLevel.substr(0, 5) + ' ' + isJson[i].CharacterClassName + ' ' + isJson[i].CharacterName);
-            }
-          }
-        }
-      };
-      xhr.send();
+    characterResearch (event) {
+      console.log('클릭함')
     }
   }
 }
 </script>
 
 <style scoped>
+  /* 길드멤버 메뉴 스타일 */
+  .guildMember-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .guildMember-div button{
+    width: 50px;
+    height: 50px;
+  }
+  .guildMember-table{
+    width: 500px;
+    min-height: 100px;
+  }
+  .guildMember-table thead tr{
+    background-color: white;
+  }
+  /* 길드마스터 메뉴 스타일 */
+
   /* 모달창 기본 스타일 */
   .modal{
     display: flex;
