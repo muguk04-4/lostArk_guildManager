@@ -154,16 +154,38 @@ export default {
     justify-content: center;
     align-items: center;
   }
-  .guildMember-div button{
-    width: 50px;
-    height: 50px;
-  }
   .guildMember-table{
+    margin-top: 50px;
     width: 500px;
     min-height: 100px;
   }
-  .guildMember-table thead tr{
+  /* *****************수정 필요**************** */
+  .guildMember-table thead th{
+    border-radius: 10px;
+    border: 1px solid black;
     background-color: white;
+    padding: 10px;
+  }
+  .guildMember-table thead tr{
+    height: 40px;
+    border-radius: 10%;
+    border: 2px solid red;
+    font-size: 18pt;
+    color: #000000;
+  }
+  .guildMember-table tbody{
+    width: 450px;
+  }
+  .guildMember-table tbody td:nth-child(1){
+    height: 20px;
+    padding: 0;
+    font-size: 12pt;
+  }
+  .guildMember-div button{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 30pt;
   }
   /* 길드마스터 메뉴 스타일 */
 
@@ -278,7 +300,7 @@ export default {
     margin-top: 10px;
     gap: 10px;
     width: 350px;
-    background-color: white;
+    background-color: var(--container-bg-color);
     border: 3px solid var(--container-bg-color);
     border-radius: 15px;
   }
