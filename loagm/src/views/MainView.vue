@@ -158,19 +158,16 @@ export default {
     margin-top: 50px;
     width: 500px;
     min-height: 100px;
+    border-collapse: collapse;
   }
-  /* *****************수정 필요**************** */
   .guildMember-table thead th{
-    border-radius: 10px;
-    border: 1px solid black;
     background-color: white;
     padding: 10px;
   }
   .guildMember-table thead tr{
     height: 40px;
-    border-radius: 10%;
-    border: 2px solid red;
-    font-size: 18pt;
+    border: 1px solid var(--container-bg-color);
+    font-size: 16pt;
     color: #000000;
   }
   .guildMember-table tbody{
@@ -180,6 +177,15 @@ export default {
     height: 20px;
     padding: 0;
     font-size: 12pt;
+  }
+  /* *****************수정 필요**************** */
+  .guildMember-table tbody td, th{
+    /* border: 1px solid black; */
+  }
+  .guildMember-table tbody td{
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--menu-bg-color);
   }
   .guildMember-div button{
     width: 50px;

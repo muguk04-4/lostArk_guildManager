@@ -33,6 +33,7 @@ input:focus{
 
 :root {
   --main-bg-color: brown;
-  --container-bg-color: rgb(83, 61, 96);
+  --menu-bg-color: #7E7CAF;
+  --container-bg-color: #4D4C7D;
 }
 </style>
