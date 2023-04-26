@@ -23,23 +23,6 @@
     <div class="menu-box">
       <button id="close" @click="btnClick" class="close">X</button>
       <div class="guildMember-div">
-        <table class="guildMember-table">
-          <thead>
-            <tr>
-              <th>{{ accountName }}</th>
-              <th>직업</th>
-              <th>템렙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>임시캐릭넴</td>
-              <td>임시직업</td>
-              <td>임시템렙</td>
-            </tr>
-          </tbody>
-        </table>
-        <button>+</button>
       </div>
       <router-link to="/"><button class="logout">로그아웃</button></router-link>
       <router-link to="/"><button class="secession">탈퇴</button></router-link>
@@ -148,53 +131,14 @@ export default {
 
 <style scoped>
   /* 길드멤버 메뉴 스타일 */
+  /* 이미지로 대체 */
   .guildMember-div{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  .guildMember-table{
-    margin-top: 50px;
-    width: 500px;
-    min-height: 100px;
-    border-collapse: collapse;
-  }
-  .guildMember-table thead th{
-    background-color: white;
-    padding: 10px;
-  }
-  .guildMember-table thead tr{
-    height: 40px;
-    border: 1px solid var(--container-bg-color);
-    font-size: 16pt;
-    color: #000000;
-  }
-  .guildMember-table tbody{
-    width: 450px;
-  }
-  .guildMember-table tbody td:nth-child(1){
-    height: 20px;
-    padding: 0;
-    font-size: 12pt;
-  }
-  /* *****************수정 필요**************** */
-  .guildMember-table tbody td, th{
-    /* border: 1px solid black; */
-  }
-  .guildMember-table tbody td{
-    height: 20px;
-    border-radius: 10px;
-    background-color: var(--menu-bg-color);
-  }
-  .guildMember-div button{
-    width: 50px;
-    height: 50px;
-    border-radius: 15px;
-    font-size: 30pt;
-  }
   /* 길드마스터 메뉴 스타일 */
-
   /* 모달창 기본 스타일 */
   .modal{
     display: flex;
