@@ -74,16 +74,7 @@
     <div class="container">
       <table class="account-table">
         <!-- 원정대 들어갈 곳 -->
-        <thead>
-          <tr>{{ accountName }}</tr>
-          <tr>직업</tr>
-          <tr>템렙</tr>
-          <tr>발탄</tr>
-          <tr>비아</tr>
-          <tr>쿠크</tr>
-          <tr>아브</tr>
-          <tr>일리</tr>
-        </thead>
+        <thead></thead>
         <!-- 캐릭터 정보 들어갈 곳 -->
         <tbody></tbody>
       </table>

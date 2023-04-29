@@ -13,7 +13,7 @@
   src: url(./fonts/NanumGothic-Regular.ttf) format("truetype");
 }
 body {
-  background-color: rgb(252, 245, 255);
+  background-color: #E9D5DA;
   font-family: "NanumGothic";
 }
 input:focus{
